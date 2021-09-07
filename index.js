@@ -1,15 +1,15 @@
-let quoteP = document.querySelector(".quote")
-let sourceP = document.querySelector(".source")
-let quoteButton = document.getElementById("showQuote")
-let sourceButton = document.getElementById("showSource")
+let cityP = document.querySelector(".city")
+let nickNameP = document.querySelector(".nickName")
+let cityButton = document.getElementById("ShowCity")
+let nickNameButton = document.getElementById("shownickName")
 
-quoteButton.addEventListener('click', ()=>{
-    if (quoteP.style.display == 'none'){
-        quoteButton.innerText = "Hide quote"
-        quoteP.style.display = 'block'
+cityButton.addEventListener('click', ()=>{
+    if (cityP.style.display == 'none'){
+        cityButton.innerText = "Hide city"
+        cityP.style.display = 'block'
     } else{
-        quoteButton.innerText = "Show quote"
-        quoteP.style.display = 'none'
+        cityButton.innerText = "Show city"
+        cityP.style.display = 'none'
     }
 })
 
@@ -21,14 +21,14 @@ const wait = (ms) =>{
     }
 }
 
-sourceButton.addEventListener('click', ()=>{
+nickNameButton.addEventListener('click', ()=>{
     setTimeout(()=>{
-        if (sourceP.style.display == 'none'){
-            sourceButton.innerText = "Hide source"
-            sourceP.style.display = 'block'
+        if (nickNameP.style.display == 'none'){
+            nickNameButton.innerText = "Hide nickName"
+            nickNameP.style.display = 'block'
         } else{
-            sourceButton.innerText = "Show source"
-            sourceP.style.display = 'none'
+           nickNameButton.innerText = "Show nickName"
+           nickNameP.style.display = 'none'
         }
     }, 5000)
     
