@@ -1,6 +1,6 @@
 let cityP = document.querySelector(".city")
 let nickNameP = document.querySelector(".nickName")
-let cityButton = document.getElementById("ShowCity")
+let cityButton = document.getElementById('showCity')
 let nickNameButton = document.getElementById("shownickName")
 
 cityButton.addEventListener('click', ()=>{
