@@ -22,7 +22,7 @@ const wait = (ms) =>{
 }
 
 nickNameButton.addEventListener('click', ()=>{
-    setTimeout(()=>{
+    wait(5000)
         if (nickNameP.style.display == 'none'){
             nickNameButton.innerText = "Hide nickName"
             nickNameP.style.display = 'block'
@@ -30,6 +30,7 @@ nickNameButton.addEventListener('click', ()=>{
            nickNameButton.innerText = "Show nickName"
            nickNameP.style.display = 'none'
         }
-    }, 5000)
+  
     
 })
+
