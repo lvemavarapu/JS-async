@@ -1,20 +1,27 @@
-async function capitalise (word){
-    if (typeof word !== 'string'){
-        throw "String required"
-    }else{
-        return word[0].toUpperCase() + word.slice(1).toLowerCase()
-    }            
+// async function capitalise(word){
+   
+//         if(typeof word !== "string"){
+//           throw  ("word must be a string")
+//         }else
+//         return word[0].toUpperCase() + word.slice(1).toLowerCase()
+//     }
+
+// capitalise("we learning async-await")
+// .then(data =>console.log(data))
+
+// async function showCity(){
+//     console.log("Paris")
+//     await setTimeout(() => {console.log(" Oslo")},2000)
+// }
+// console.log("London")
+
+// showCity()
+
+async function movieName(){
+    let promise = new Promise((resolve, reject) =>{
+        setTimeout(() =>resolve("Harry Potter"),2000)
+    })
+    let show = await promise
+    alert(show)
 }
-//await is a keyword that ALWAYS is used in an async function
-
-// capitalise("managing async JS").then(data => {console.log(data)})
-
-async function showNumbers(){
-    console.log(1)
-    await setTimeout(()=>{
-        console.log(2)
-    },2000)
-    console.log(3)
-}
-
-showNumbers()
+movieName()

@@ -11,13 +11,16 @@
 
 function capitalise(word){
     return new Promise((resolve, reject) =>{
+        setTimeout(()=>{
         if(typeof word !== "string"){
             reject(new Error("word must be a string"))
         }else
         resolve(word[0].toUpperCase() + word.slice(1).toLowerCase())
+    },1000)
 
     })
 }
+//following function adds ... to the end of the string
 function checkLength(string){
     if(string.length >5){
         console.log(string + "...")
@@ -26,9 +29,12 @@ function checkLength(string){
         throw new Error("string length must be greater than 5")
     }
 }
-capitalise("new")
-.then((data)=>{return(data)})
-//.then((value)=>console.log(value +"***"))
-.then(checkLength)
-.catch(e=>{console.log("error:" +e.message)})
-.finally(console.log("Promise execution completed"))
+//console.log(capitalise("brisbane"))
+// capitalise("new")
+// .then((data)=>{return(data)})
+// //.then((value)=>console.log(value +"***"))
+// .then(checkLength)
+// .catch(e=>{console.log("error:" +e.message)})
+// .finally(console.log("Promise execution completed"))
+
+
